@@ -4,38 +4,300 @@
 <head>
 	<title></title>
 	<!-- for-mobile-apps -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="" />
 	<!-- //for-mobile-apps -->
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="/js/jquery-3.5.1.min.js"></script>
+	<!-- Meta Pixel Code -->
+	<script>
+		!function (f, b, e, v, n, t, s) {
+			if (f.fbq) return; n = f.fbq = function () {
+				n.callMethod ?
+					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+			n.queue = []; t = b.createElement(e); t.async = !0;
+			t.src = v; s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '1596385534482904');
+		fbq('track', 'PageView');
+	</script>
+	<noscript>
+		<img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=1596385534482904&ev=PageView&noscript=1" />
+	</noscript>
+	<!-- End Meta Pixel Code -->
+
+	<script type="text/javascript">
+
+		$(function () {
+			$('.join-btn').click(function () {
+				console.log('click', this)
+				fbq('track', 'Purchase', { currency: "USD", value: 30.00 });
+			});
+		})
+		// 滚动超过1屏幕高度，显示悬浮按钮
+		window.onscroll = function () {
+
+			console.log(window.pageYOffset > window.innerHeight)
+			if (window.pageYOffset <= window.innerHeight / 2) {
+				$('.pos-btn').addClass('hide-btn')
+			} else {
+				$('.pos-btn').removeClass('hide-btn')
+			}
+		}
+	</script>
 </head>
 
 <body>
-
+	<div class="join-btn d-flex justify-content-center align-items-center pos-btn hide-btn">FREE TO JOIN</div>
 	<!-- banner -->
-	<div class="w3-banner">
-		<div class="container">
-			<div class="w3l-banner-info">
-				<h2>Finding Stocks that'll Pay <br /> Growing Dividends Forever..</h2>
-				<p>In a short period of time, the assets of many people in the community<br />increased from $5,000 to
-					$230,000. </p>
-			</div>
+	<div class="w3-banner padding">
+		<div class="w3l-banner-info">
+			<h2 class="font-size">Finding Stocks that'll Pay <br /> Growing Dividends Forever..</h2>
+			<p>In a short period of time, the assets of many people in the community<br />increased from $5,000 to
+				$230,000. </p>
+		</div>
 
-			<div class="w-btn text-center d-flex justify-content-center align-items-center">Free to join</div>
+		<div class="join-btn w-btn text-center d-flex justify-content-center align-items-center">Free to join</div>
 
-			<h2 class="personal">Personal</h2>
-			<div class="num d-flex justify-content-center align-items-center">$237,340.15</div>
-			<div class="d-flex justify-content-center align-items-center all-time">
-				<img class="arrow" src="./images/arrow.png" alt="">
-				<span>$109,008.84(104.27%) all time</span>
-			</div>
+		<h2 class="personal">Personal</h2>
+		<div class="num d-flex justify-content-center align-items-center">$237,340.15</div>
+		<div class="d-flex justify-content-center align-items-center all-time">
+			<img class="arrow" src="./images/arrow.png" alt="">
+			<span>$109,008.84(104.27%) all time</span>
 		</div>
 	</div>
 	<!-- //banner -->
 	<div class="tips d-flex justify-content-center align-items-center">
 		The Fastest Way You Can Live Off DiviRdends!
+	</div>
+
+	<!-- free daily dividends -->
+	<div class="free-daily-dividends padding">
+		<ul class="row top-btns d-flex justify-content-between align-items-center">
+			<li class="col-2">As seen in</li>
+			<li class="col-2">Forbes</li>
+			<li class="col-2">FAST COMPANY</li>
+			<li class="col-2">FORTUNE</li>
+			<li class="col-2">THE WALL STREET JOURNAL</li>
+		</ul>
+
+		<div class="row">
+			<div class="col-12 col-md-5">
+				<img class="people-1" src="/images/people-1.png" alt="">
+			</div>
+
+			<div class="col-12 col-md-7">
+				<h2 class="title">Free daily dividends</h2>
+				<p>Learn how to invest in the stock market as a complete beginner.</p>
+
+				<p>Join our WhatsApp investment strategy team. Simple steps.</p>
+				<p>We'll help you easily increase your wealth by more than 500%, in just one day, with just one brave attempt.
+				</p>
+				<p>The simplest weekly dividend cash portfolio with 4 monthly dividend stocks that pay you dividends every week,
+					all year long. For a free weekly newsletter with market updates and strategies, join our community by clicking
+					the button below</p>
+			</div>
+		</div>
+	</div>
+	<div class="power padding">
+		<h2 class="title text-center">Power your investing strategies.</h2>
+
+		<ul class="row">
+			<li class="col-12 col-md-4 p-li">
+				<img class="p-icon icon-1" src="/images/icon-1.png" alt="">
+				<div class="p-wrap">
+					<div class="p-title">Understand every investment</div>
+					<p class="p-text">We have professional portfolio managers to serve you and unlock the secrets of the stock
+						market to make your
+						trading
+						easier.</p>
+				</div>
+			</li>
+			<li class="col-12 col-md-4 p-li">
+				<img class="p-icon icon-1" src="/images/icon-2.png" alt="">
+				<div class="p-wrap">
+					<div class="p-title">Get to know our artificial intelligence technology: yourinvesting co-pilot</div>
+					<p class="p-text">Explore real-time and historical asset data,screen the markets and summarize earnings calls
+						right after they air with
+						the power of Al.</p>
+				</div>
+			</li>
+			<li class="col-12 col-md-4 p-li">
+				<img class="p-icon icon-1" src="/images/icon-3.png" alt="">
+				<div class="p-wrap">
+					<div class="p-title">Create Investment Plans</div>
+					<p class="p-text">Take the emotion out of investing and put your portfolio on autopilot by scheduling
+						recurring
+						contributions to a custom
+						mix of up to 20 assets.</p>
+				</div>
+			</li>
+			<li class="col-12 col-md-4 p-li">
+				<img class="p-icon icon-1" src="/images/icon-4.png" alt="">
+				<div class="p-wrap">
+					<div class="p-title">Professional Portfolio Manager</div>
+					<p class="p-text">We have access to the latest Wall Street intelligence to help you find strong growth stocks
+						on
+						the Nasdag and Dow.</p>
+				</div>
+			</li>
+			<li class="col-12 col-md-4 p-li">
+				<img class="p-icon icon-1" src="/images/icon-5.png" alt="">
+				<div class="p-wrap">
+					<div class="p-title">Get expert analysis. Live.</div>
+					<p class="p-text">Listen to daily conversations on the latest market news,and view reports on sector trends,
+						stock breakdowns economic
+						data, andmore.</p>
+				</div>
+			</li>
+
+			<li class="col-12 col-md-4 p-li">
+				<img class="p-icon icon-1" src="/images/icon-6.png" alt="">
+				<div class="p-wrap">
+					<div class="p-title">Get inspired by thePublic community</div>
+					<p class="p-text">Gain valuable ideas inspiration, and investing opportunities from an active community of
+						millions of investors.</p>
+				</div>
+			</li>
+
+		</ul>
+		</ul>
+	</div>
+	<div class="secure padding">
+		<h2 class="title text-center">Secure & trusted</h2>
+		<ul class="row d-flex justify-content-center align-items-center">
+			<li class="col-12">
+				<div class="s-title">We are fully regulated</div>
+				<div class="s-text">US-Listed Registered Securities on Public are offered by our SEC- and FINRA-registered
+					broker-dealer.
+				</div>
+			</li>
+			<li class="col-12">
+				<div class="s-title">Your assets are protected</div>
+				<div class="s-text">Public is a member of SIPC. Securities in your account protected up to $500,000.</div>
+			</li>
+			<li class="col-12">
+				<div class="s-title">We here to help</div>
+				<div class="s-text">Our award-winning customer experience team is ready to answer your questions 7 days a week.
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="guarante padding">
+		<h2 class="title text-center">Guaranteed to be completely free!</h2>
+		<div class="g-text text-center">
+			We are a community of professional stock market institutions that screen tens of <br />
+			thousands of data points every day to find stocks with strong<br />
+			upward trends, with a success rate as high as 95%.</div>
+		<div class="divider text-center">></div>
+		<div class="website text-center">
+			<a href="https://starnavigationcapital.com/">Website URL: https://starnavigationcapital.com/</a>
+		</div>
+	</div>
+
+	<div class="profile padding">
+		<div class="row">
+			<div class="col-md-5 col-xs-12">
+				<img class="pr-img" src="/images/people-2.png" alt="">
+			</div>
+			<div class="col-md-7 col-xs-12 ">
+				<div class="title">
+					Guru / Advisor <br />
+					Jason Hamilton
+				</div>
+				<div class="text">
+					Personal Profile:<br />
+					Gender: Male<br />
+					Age: 53<br />
+					Place of Birth: Los Angeles, California
+					<br />
+					<br />
+					Jason Hamilton is a highly respected financial investment expert on Wall Street, boasting a wealth of academic
+					background and professional knowledge. He graduated from Harvard University in the United States with a
+					doctoral degree.
+					In the financial industry, he is widely acclaimed for his profound expertise and outstanding achievements.
+					<br /><br />
+					Career Experience:
+					<br /><br />
+					Over the past twenty years, Jason Hamilton has held key roles in the financial sector. He served as the
+					Executive Vice
+					President and Chief Investment Officer of Global Stock Beta Solutions at Morgan Stanley, where he led the
+					company's
+					global investment strategy and execution teams. During this period, he successfully guided the team, making
+					significant
+					contributions to the company's substantial returns on a global scale.
+					<br />
+					Leading a team of over 100 portfolio managers and analysts, he oversaw the management of more than 1,400
+					portfolios
+					covering all stock indices and Smart Beta strategies, with total assets exceeding $500 billion. As one of the
+					core
+					leaders of the company, he played a crucial role in investment strategy and analysis, earning the trust and
+					recognition
+					of clients worldwide.
+				</div>
+			</div>
+			<div class="col-12 text">
+				Professional Skills:
+				<br /><br />
+				Jason Hamilton is renowned for his profound insights into financial markets and sharp analytical abilities. He
+				excels in
+				leveraging big data and advanced analytics tools to identify investment opportunities and develop effective
+				investment
+				strategies. His understanding of various asset classes and global markets enables him to provide comprehensive
+				investment advice to clients.
+				<br /><br />
+				Service Scope:
+				<br /><br />
+				As Chief Analyst, Jason Hamilton's service scope spans global clients. Regardless of their region or industry,
+				he is
+				committed to providing all clients with personalized investment solutions and assisting them in achieving their
+				financial goals.
+				<br /><br />
+				Influence and Recognition:
+				<br /><br />
+				Jason Hamilton is highly regarded in the financial industry, with his professional insights widely recognized
+				and
+				exerting significant influence on the market. As Chief Analyst, he leads an efficient team and jointly manages
+				large-scale investment funds. His decisions and recommendations play a crucial role in the performance of fund
+				company
+				portfolios.
+			</div>
+		</div>
+	</div>
+
+	<div class="result padding">
+		<h2 class="title text-center">Take a look at the results
+			of some community investors!<br />
+		</h2>
+		<div class="text text-center">Many investors join us every day</div>
+		<div class="row">
+			<div class="col-6 d-flex justify-content-center align-items-center">
+				<img class="res-img" src="/images/img-1.png" alt="">
+			</div>
+			<div class="col-6 d-flex justify-content-center align-items-center">
+				<img class="res-img" src="/images/img-2.png" alt="">
+			</div>
+			<div class="col-6 d-flex justify-content-center align-items-center">
+				<img class="res-img" src="/images/img-3.png" alt="">
+			</div>
+			<div class="col-6 d-flex justify-content-center align-items-center">
+				<img class="res-img" src="/images/img-4.png" alt="">
+			</div>
+		</div>
+	</div>
+
+	<div class="footer padding">
+		<h2 class="title text-center">I hope you become the next successful
+			investor in the community</h2>
+		<div class="text text-center">See you inside!</div>
+		<div class="f-btn text-center d-flex justify-content-center align-items-center join-btn">Free to join</div>
 	</div>
 </body>
 
